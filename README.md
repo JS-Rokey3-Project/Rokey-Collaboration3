@@ -17,6 +17,7 @@
 ---
 
 ## 👨‍💻 결과 영상
+
 <p align="center">
   <video controls src="./docs/result.mp4" title="결과 영상(1.5배속)" width="70%"></video>
 </p>

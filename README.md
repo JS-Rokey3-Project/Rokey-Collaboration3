@@ -19,7 +19,9 @@
 ## 👨‍💻 결과 영상
 
 <p align="center">
-  <video controls src="./docs/result.mp4" title="결과 영상(1.5배속)" width="70%"></video>
+  <a href="https://drive.google.com/file/d/1WHfseaIbaJwZC_o4LUDoDXB6uj69YgmL/view?usp=sharing" target="_blank">
+    <img src="./docs/result_thumb.png" alt="결과 영상 썸네일" width="70%">
+  </a>
 </p>
 
 ---

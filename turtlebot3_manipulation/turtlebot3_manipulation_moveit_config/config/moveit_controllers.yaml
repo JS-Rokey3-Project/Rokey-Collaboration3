@@ -1,0 +1,25 @@
+controller_names:
+  - arm_controller
+  - gripper_controller
+
+# MoveIt이 "팔 조인트"를 제어
+arm_controller:
+  type: FollowJointTrajectory
+  # FollowJointTrajectory타입은 trajectory_msgs/JointTrajectoryAction을 통해 조인트들의 위치, 속도 등을 따라 움직이도록 명령
+  action_ns: follow_joint_trajectory
+  default: true
+  joints:
+    - joint1
+    - joint2
+    - joint3
+    - joint4
+
+# gripper 여닫이 제어
+gripper_controller:
+  # GripperCommand 타입은 간단한 "열기/닫기" 명령을 위한 표준 액션 타입
+  # control_msgs/action/GripperCommand 메시지를 사용
+  type: GripperCommand
+  action_ns: gripper_cmd
+  default: true
+  joints:
+    - gripper_left_joint

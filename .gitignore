@@ -1,0 +1,105 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+.env
+.venv
+*.pkl
+*.log
+
+# ROS2
+install/
+build/
+log/
+*.launch.py~
+*.rviz
+*.db3
+*.yaml~
+
+# CMake / colcon
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+colcon_cd.sh
+colcon_command_prefix.sh
+local_setup.*
+setup.*
+*.swp
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs (e.g., PyCharm, CLion)
+.idea/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Git
+*.orig
+*.rej
+*.bak
+*.tmp
+*~
+
+# 프로젝트에서 제외할 특정 디렉토리
+DynamixelSDK/
+ld08_driver/
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+.env
+.venv
+*.pkl
+*.log
+
+# ROS2
+install/
+build/
+log/
+*.launch.py~
+*.rviz
+*.db3
+*.yaml~
+
+# CMake / colcon
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+colcon_cd.sh
+colcon_command_prefix.sh
+local_setup.*
+setup.*
+*.swp
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs (e.g., PyCharm, CLion)
+.idea/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Git
+*.orig
+*.rej
+*.bak
+*.tmp
+*~
+
+# 프로젝트에서 제외할 특정 디렉토리
+DynamixelSDK/
+ld08_driver/
+

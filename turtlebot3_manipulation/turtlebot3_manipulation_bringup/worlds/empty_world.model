@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="default">
+
+    <!-- 기존 바닥 제거 또는 주석 처리 -->
+    <!-- <include>
+      <uri>model://ground_plane</uri>
+    </include> -->
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- ✨ 사용자 정의 바닥 추가 -->
+    <model name="textured_ground">
+      <static>true</static>
+      <link name="ground_link">
+        <visual name="ground_visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>3 2</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://textured_ground/materials/scripts</uri>
+              <uri>model://textured_ground/materials/textures</uri>
+              <name>Gazebo/GroundTexture</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="ground_collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>3 2</size>
+            </plane>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <scene>
+      <shadows>false</shadows>
+    </scene>
+
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>1.226730 -1.270682 1.172346 0 0.545800 2.301601</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+
+    <physics type="ode">
+      <real_time_update_rate>1000.0</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>150</iters>
+          <precon_iters>0</precon_iters>
+          <sor>1.400000</sor>
+          <use_dynamic_moi_rescaling>1</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0.00001</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>2000.000000</contact_max_correcting_vel>
+          <contact_surface_layer>0.01000</contact_surface_layer>
+        </constraints>
+      </ode>
+    </physics>
+  </world>
+</sdf>
